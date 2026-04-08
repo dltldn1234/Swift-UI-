@@ -14,7 +14,7 @@ struct ContentView: View {
                 Color.black.ignoresSafeArea(.all)
                 
                 VStack(spacing: 0) {
-                    HStack(){
+                    HStack(spacing: 0){
                         Image("Image")
                             .padding(.trailing, 9)
                         Text("Book-on")
@@ -25,9 +25,9 @@ struct ContentView: View {
                     .padding(.leading, 25)
                     Spacer()
                 }
-                VStack(){
+                VStack(spacing: 0){
                     Text("학교 도서관을 더 쉽게 이용하는 방법")
-                        .font(.system(size: 17, weight: .semibold))
+                        .font(.system(size: 17, weight: .bold))
                         .foregroundColor(.white)
                         .padding(.bottom, 41)
                     

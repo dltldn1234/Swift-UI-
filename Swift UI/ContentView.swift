@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
+        NavigationStack{
             ZStack(){
-                Color.black.ignoresSafeArea()
+                Color.black.ignoresSafeArea(.all)
                 
                 VStack(spacing: 0) {
                     HStack(spacing: 0){
@@ -37,13 +37,18 @@ struct ContentView: View {
                         .padding(.bottom, 64)
                         .multilineTextAlignment(.center)
                     
-                    Text("시작하기")
-                        .font(.system(size: 17, weight: .bold))
-                        .foregroundColor(.white)
-                        .frame(width: 162, height: 32)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 25)
-                                .stroke(Color.white, lineWidth: 2))
+                    NavigationLink{
+                        book_onView2()
+                    } label: {
+                        Text("시작하기")
+                            .font(.system(size: 17, weight: .bold))
+                            .foregroundColor(.white)
+                            .frame(width: 162, height: 32)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 25)
+                                    .stroke(Color.white, lineWidth: 2))
+                    }
+                
                 }
             }
             

@@ -35,46 +35,53 @@ struct book_onView2: View {
                         .cornerRadius(25)
                     
                     VStack(spacing: 0){
+                        
                         Image("Image")
                             .padding(.bottom, 13)
                             .padding(.top, 15)
                         
-                            Text("Book-on에 가입하신 걸 환영합니다!")
-                                .font(.system(size: 15, weight: .bold))
-                                .foregroundColor(.white)
-                                .padding(.bottom, 54)
-                            
-                            
-                            Text("책 검색, 대출현황, 좌석예약까지 \n 한번에 관리하세요")
-                                .font(.system(size: 15, weight: .medium))
-                                .foregroundColor(.white)
-                                .padding(.bottom, 61)
+                        Text("Book-on에 가입하신 걸 환영합니다!")
+                            .font(.system(size: 15, weight: .bold))
+                            .foregroundColor(.white)
+                            .padding(.bottom, 54)
                         
-                            
-                            Text("로그인")
-                                .frame(width: 200, height: 35)
-                                .font(.system(size: 17, weight: .bold))
-                                .background(.white)
-                                .cornerRadius(10)
-                                        
-                                
-
-                                .padding(.bottom, 9)
+                        Text("책 검색, 대출현황, 좌석예약까지 \n 한번에 관리하세요")
+                            .font(.system(size: 15, weight: .medium))
+                            .foregroundColor(.white)
+                            .padding(.bottom, 61)
                         
-                            Text("처음이신가요?")
-                                .font(.system(size: 13, weight: .regular))
-                                .foregroundColor(.확인했슴다)
-                                
+                        
+                        Button(action: {
+                                print("어서오세용 북온이에용 만나서 반가워용")
+                            }) {
+                                Text("로그인")
+                                    .frame(width: 220, height: 35)
+                                    .background(.white)
+                                    .font(.system(size: 15, weight: .bold))
+                                    .cornerRadius(10)
+                                    .foregroundColor(.black)
+                                                            
+                                    .padding(.bottom, 9)
+                }
+                        
+                        Text("처음이신가요?")
+                            .font(.system(size: 13, weight: .regular))
+                            .foregroundColor(.확인했슴다)
+                        
                     }
+              
+                    
+  
                 }
                 .padding(.bottom, 165)
                 .padding(.leading, 51)
                 .padding(.trailing, 51)
             }
+            
         }
     }
 }
-
+    
 #Preview {
-    book_onView2()
+    ContentView()
 }
